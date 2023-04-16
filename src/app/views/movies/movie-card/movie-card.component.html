@@ -1,0 +1,16 @@
+
+<mat-card (click)="openCard(movie)" [class.pointer]="!movie['isPreview']" class="shadow">
+  <mat-card-title class="d-flex justify-content-center">
+    <img mat-card-md-image [ngClass]="movie['isPreview'] ? 'rounded-4 w-100' : 'rounded-circle'" class="d-block"
+      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      src="{{'https://ui-avatars.com/api/?name=' + movie.title}} {{ movie['isPreview'] ?'&background=0D8ABC&color=fff': '' }}"
+      >
+  </mat-card-title>
+  <mat-card-title [class.text-truncate]="!movie['isPreview']" class="text-center my-4">{{ movie.title }}</mat-card-title>
+  <mat-card-content [class.text-truncate]="!movie['isPreview']" class="text-center">
+    {{ movie.description }}
+  </mat-card-content>
+  <mat-card-actions class="text-center card-genre">
+    {{ movie.genres }}
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,60 @@
+<div class="page">
+  <!-- <section class="vh-100" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <form [formGroup]="loginForm">
+                <h2 class="mb-5">SIGN IN</h2>
+                <div>
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" formControlName="username">
+                    <mat-error>Username required</mat-error>
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" formControlName="password">
+                    <mat-error>Password required</mat-error>
+                  </mat-form-field>
+                </div>
+
+                <button mat-raised-button (click)="login()" [disabled]="disableBtn" color="primary" class="w-100" type="submit">LOGIN</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <section class="d-flex justify-content-center align-items-center vh-100">
+      <mat-card class="shadow-lg col-xs-12 col-xm-12 col-mg-6 col-lg-3">
+      <form [formGroup]="loginForm">
+      <mat-card-title class="text-center my-4">SIGN IN</mat-card-title>
+      <mat-card-content class="text-center">
+          <div>
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Username" formControlName="username">
+              <mat-error>Username required</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" formControlName="password">
+              <mat-error>Password required</mat-error>
+            </mat-form-field>
+          </div>
+
+        </mat-card-content>
+        <mat-card-actions class="text-center card-genre">
+          <button mat-raised-button (click)="login()" [disabled]="disableBtn" color="primary" class="w-100" type="submit">LOGIN</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </section>
+</div>
