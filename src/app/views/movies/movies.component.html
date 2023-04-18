@@ -1,9 +1,6 @@
-<!-- <div class="vh-100">
-  <p>movies works!</p>
-</div> -->
+
 <div class="vh-100">
   <mat-toolbar class="justify-content-around" color="primary">
-    <!-- <div class="row"> -->
       <div class="col d-none d-md-block">MOVIES COLLECTION</div>
       <div class="col">
         <mat-form-field class="w-100" appearance="outline">
@@ -19,49 +16,14 @@
           <mat-icon (click)="signOut()">logout</mat-icon>
         </button>
       </div>
-    <!-- </div> -->
-
-    <!-- <div>MOVIES COLLECTION</div>
-      <p>
-        <mat-form-field appearance="outline">
-          <input matInput placeholder="Search...">
-          <mat-icon matSuffix>search</mat-icon>
-        </mat-form-field>
-      </p>
-    <div>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-    </div> -->
   </mat-toolbar>
 
   <div class="container h-100">
     <ng-container *ngIf="movies.length && !apiFailed">
       <div class="row justify-content-center">
-
         <div *ngFor="let movie of movies" class="col-xs-12 col-md-6 col-lg-3 card-container">
-          <!-- <mat-card (click)="openCard(movie)" class="shadow example-card">
-            <mat-card-title class="d-flex justify-content-center">
-              <img mat-card-md-image class="rounded-circle d-block"
-                src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                src="{{'https://ui-avatars.com/api/?name=' + movie.title}}"
-                >
-            </mat-card-title>
-            <mat-card-title class="text-center">{{ movie.title }}</mat-card-title>
-            <mat-card-content class="text-center text-truncate">
-              {{ movie.description }}
-            </mat-card-content>
-            <mat-card-actions class="text-center card-genre">
-              {{ movie.genres }}
-            </mat-card-actions>
-          </mat-card> -->
-
           <app-movie-card [movie]="movie"></app-movie-card>
         </div>
-
       </div>
 
       <mat-paginator [length]="totalCount" [pageSize]="10" (page)="pageChange($event)" aria-label="Select page">
