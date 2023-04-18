@@ -52,7 +52,7 @@ export class MoviesComponent implements OnInit, AfterViewInit {
         if (!searchTerm) {
           this.movies = [...this.moviesMaster];
         } else {
-          this.movies = this.moviesService.filterMovies(this.movies, searchTerm);
+          this.movies = this.moviesService.filterMovies(this.moviesMaster, searchTerm);
         }
       });
   }
